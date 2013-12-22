@@ -1,0 +1,8 @@
+altscreen on
+vbell off
+
+hardstatus on
+#hardstatus alwayslastline "%{=b}%{G} Screens: %{b}%w"
+hardstatus alwayslastline '%{= 9w}%{+b}[%H] %{-b}%{= 9g}%-Lw%{= 9r}%{+b}%n*%f %t%{-b}%{= 9g}%+Lw%{= 9w}%{+b} %= %C %a'
+defscrollback 5000
+term screen-256color
