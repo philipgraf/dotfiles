@@ -13,4 +13,4 @@ autocmd Filetype go setlocal ts=4 sw=4 noexpandtab
 autocmd Filetype c setlocal ts=4 sw=4 noexpandtab
 autocmd Filetype cpp setlocal ts=4 sw=4 noexpandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
-autocmd Filetype coffee setlocal ts=4 sw=4 noexpandtab
+autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
