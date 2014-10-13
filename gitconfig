@@ -1,14 +1,13 @@
 [user]
 	email = mail@philipgraf.de
 	name = Philip Graf
-        signingkey = 8BB7836F
 [core]
         editor = vim
 [push]
 	default = simple
 [alias]
 	st = status
-	ci = commit -S
+	ci = commit
 	co = checkout
 	di = diff
 	dc = diff --cached
