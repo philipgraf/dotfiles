@@ -1,4 +1,10 @@
 {
+  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "ignored_packages":
+  [
+    "Vintage",
+    "Markdown"
+  ],
   "font_size": 11,
   "tab_stop": 2,
   "translate_tabs_to_spaces": true,
