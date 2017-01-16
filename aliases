@@ -1,0 +1,17 @@
+alias ls='ls --color=auto'
+alias em='emacsclient -t -a ""'
+
+alias rails_reset='rake db:drop db:create db:migrate db:seed'
+
+alias speed1000='curl http://speed.hetzner.de/1GB.bin > /dev/null'
+alias speed100='curl http://speed.hetzner.de/100MB.bin > /dev/null'
+
+alias docker_ip='docker inspect --format="{{.NetworkSettings.IPAddress}}"'
+
+alias mux='tmuxinator'
+alias toclip='xclip -selection c'
+alias tkill='tmux kill-session -t'
+alias onfire='dig +short txt istheinternetonfire.com'
+alias public_ip='curl -s "https://api.ipify.org?format=text"'
+alias fix_android_emulator='ln -sf /usr/lib/libstdc++.so.6  ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6'
+unalias t
