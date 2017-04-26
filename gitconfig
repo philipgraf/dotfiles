@@ -43,5 +43,6 @@
     ra = !git r --all
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
+    lo = log --oneline
 [merge]
 	tool = meld
