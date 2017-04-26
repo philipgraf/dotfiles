@@ -13,5 +13,5 @@ alias toclip='xclip -selection c'
 alias tkill='tmux kill-session -t'
 alias onfire='dig +short txt istheinternetonfire.com'
 alias public_ip='curl -s "https://api.ipify.org?format=text"'
-alias fix_android_emulator='ln -sf /usr/lib/libstdc++.so.6  ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6'
+alias fix_android_emulator='ln -sf /usr/lib/libstdc++.so.6  ~/Android/SDK/emulator/lib64/libstdc++/libstdc++.so.6'
 unalias t
