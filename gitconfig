@@ -5,6 +5,8 @@
     editor = /usr/bin/vim
 [push]
     default = simple
+[diff]
+    tool = meld
 [alias]
     st = status
     ci = commit
@@ -41,3 +43,5 @@
     ra = !git r --all
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
+[merge]
+	tool = meld
