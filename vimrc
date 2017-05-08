@@ -1,4 +1,6 @@
 set nocompatible              " be iMproved, required
+set modelines=0               " CVE-2007-2438
+set backspace=2
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
