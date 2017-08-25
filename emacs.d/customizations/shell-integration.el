@@ -4,3 +4,5 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs
    '("PATH")))
+
+(add-to-list 'exec-path (concat (getenv "HOME") "/bin"))
