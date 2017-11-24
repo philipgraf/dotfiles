@@ -83,4 +83,7 @@ bindkey "^S" "insert-selecta-path-in-command-line"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+bindkey "5C" forward-word
+bindkey "5D" backward-word
+
 [[ -f $HOME/.zsh_local ]] && source $HOME/.zsh_local
