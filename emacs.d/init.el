@@ -56,14 +56,12 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
-    tagedit
-    
     ;; project navigation
     projectile
 
     ;; git integration
     magit
-    
+
     ;; https://github.com/pashky/restclient.el
     restclient
 
@@ -147,7 +145,7 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (cider-decompile avy evil tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
