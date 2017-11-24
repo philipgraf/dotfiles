@@ -34,6 +34,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lervag/vimtex'
+Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
