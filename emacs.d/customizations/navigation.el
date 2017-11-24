@@ -58,5 +58,7 @@
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 
+(global-set-key (kbd "C-/") 'avy-goto-char)
+
 ;; projectile everywhere!
 (projectile-global-mode)
