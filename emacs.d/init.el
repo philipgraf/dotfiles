@@ -67,6 +67,9 @@
     ;; https://github.com/pashky/restclient.el
     restclient
 
+    ;; https://github.com/justbur/emacs-which-key
+    which-key
+
     ;; https://github.com/abo-abo/avy
     avy
     ))
