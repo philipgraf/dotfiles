@@ -72,6 +72,9 @@
 
     ;; https://github.com/abo-abo/avy
     avy
+
+    ;; https://github.com/purcell/exec-path-from-shell
+    exec-path-from-shell
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
