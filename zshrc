@@ -88,3 +88,6 @@ bindkey "5D" backward-word
 
 [[ -f $HOME/.zsh_local ]] && source $HOME/.zsh_local
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
+
+# ANDROID_HOME is defined in .zsh_local
+[[ ! -z "$ANDROID_HOME" ]] && export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
