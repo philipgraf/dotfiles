@@ -56,6 +56,8 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
+    tagedit
+
     ;; project navigation
     projectile
 
@@ -73,6 +75,9 @@
 
     ;; https://github.com/purcell/exec-path-from-shell
     exec-path-from-shell
+
+    ;; https://github.com/Malabarba/aggressive-indent-mode
+    aggressive-indent
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
