@@ -15,18 +15,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 " git support
-Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
@@ -35,6 +31,9 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lervag/vimtex'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
+"Plugin 'SirVer/ultisnips'
 Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
@@ -95,7 +94,15 @@ if has("autocmd")
         au FileType ruby nnoremap <leader>l :Rubocop<CR>
 endif
 
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -107,7 +114,7 @@ if executable('ag')
         let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 let mapleader = ","
-let g:ctrlp_show_hidden = 1
+let g:ctrlp_show_hidden = 0
 let g:syntastic_coffee_coffeelint_args = "--csv --file config.json"
 let g:syntastic_jade_checkers = ['jade_lint']
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
@@ -115,6 +122,7 @@ let g:go_fmt_command = "goimports"
 
 map <TAB> :NERDTreeToggle<CR>
 nmap <C-o> o<Esc>
+imap jj <Esc>
 
 function! NumberToggle()
         if(&relativenumber == 1)
@@ -125,6 +133,33 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" Run a given vim command on the results of fuzzy selecting from a given shell
+" command. See usage below.
+function! SelectaCommand(choice_command, selecta_args, vim_command)
+  try
+    let selection = system(a:choice_command . " | selecta " . a:selecta_args)
+  catch /Vim:Interrupt/
+    " Swallow the ^C so that the redraw below happens; otherwise there will be
+    " leftovers from selecta on the screen
+    redraw!
+    return
+  endtry
+  redraw!
+  exec a:vim_command . " " . selection
+endfunction
+
+" Find all files in all non-dot directories starting in the working directory.
+" Fuzzy select one of those. Open the selected file with :e.
+nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
+function! SelectaBuffer()
+  let bufnrs = filter(range(1, bufnr("$")), 'buflisted(v:val)')
+  let buffers = map(bufnrs, 'bufname(v:val)')
+  call SelectaCommand('echo "' . join(buffers, "\n") . '"', "", ":b")
+endfunction
+
+" Fuzzy select a buffer. Open the selected buffer with :b.
+nnoremap <leader>b :call SelectaBuffer()<cr>
 
 if has("autocmd")
         autocmd InsertEnter * :set norelativenumber

@@ -10,11 +10,11 @@ compinit
 
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
+export PATH="$PATH:$HOME/dev/flutter/flutter/bin"
+export PATH="/usr/local/Cellar/ansible/2.7.9/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 # Colorize terminal
-alias ls='ls --color=auto'
-alias ll='ls -l --color=auto'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # Nicer history
@@ -30,7 +30,7 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-zstyle ':completion:*' menu select=20
+zstyle ':completion:*' menu select=5
 
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
