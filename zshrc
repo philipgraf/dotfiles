@@ -8,7 +8,7 @@ prompt grb
 autoload -U compinit
 compinit
 
-# Add pats
+# Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
 
