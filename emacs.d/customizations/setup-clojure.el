@@ -34,6 +34,9 @@
 ;; enable paredit in your REPL
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 
+
+(put-clojure-indent 'attempt-all 1)
+(put-clojure-indent 'thrown-with-type? 1)
 ;; Use clojure mode for other extensions
 ;; (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))

@@ -14,3 +14,5 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (which-key-mode)
+
+(setq restclient-inhibit-cookies t)

@@ -49,7 +49,7 @@
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
-    ido-ubiquitous
+    ido-completing-read+
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
@@ -78,6 +78,10 @@
 
     ;; https://github.com/Malabarba/aggressive-indent-mode
     aggressive-indent
+
+    rjsx-mode
+
+    yaml-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -147,10 +151,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   [zenburn-bg zenburn-red zenburn-green zenburn-yellow zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg])
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "7f1263c969f04a8e58f9441f4ba4d7fb1302243355cb9faecb55aec878a06ee9" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
+ '(default-input-method "german-postfix")
  '(package-selected-packages
    (quote
-    (cider-decompile avy evil tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (cider-decompile avy rjsx-mode markdown-mode yaml-mode tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
