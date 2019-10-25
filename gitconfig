@@ -44,5 +44,13 @@
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
     lo = log --oneline
+    lastchange = log -p --follow -n 1
 [merge]
-	tool = meld
+    tool = meld
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[init]
+    templateDir = ~/.git-template

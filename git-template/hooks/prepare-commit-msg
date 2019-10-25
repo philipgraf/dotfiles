@@ -1,0 +1,15 @@
+#!/bin/sh
+
+first_line=$(head -n1 "$1")
+
+task=$(git symbolic-ref --short HEAD |  grep -o "^[A-Z]\{3\}-\d\+")
+
+if [ -z "$first_line"  ] ;then
+    original_message=$(tail -n +2 "$1")
+    cat > "$1" <<-EOF
+$(test -n "$task" && echo "\n\nJIRA: $task")
+$original_message
+EOF
+fi
+
+
