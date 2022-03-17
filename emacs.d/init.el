@@ -31,7 +31,10 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(;; makes handling lisp expressions much, much easier
+  '(;; ag search
+    ag
+
+    ;; makes handling lisp expressions much, much easier
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
@@ -162,7 +165,7 @@
  '(default-input-method "german-postfix")
  '(package-selected-packages
    (quote
-    (cider-decompile avy rjsx-mode markdown-mode yaml-mode tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (ag cider-decompile avy rjsx-mode markdown-mode yaml-mode tagedit smex restclient projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

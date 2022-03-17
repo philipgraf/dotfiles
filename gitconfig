@@ -2,7 +2,7 @@
     email = mail@philipgraf.de
     name = Philip Graf
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
 [push]
     default = simple
 [diff]
@@ -54,3 +54,6 @@
     required = true
 [init]
     templateDir = ~/.git-template
+	defaultBranch = master
+[pull]
+	rebase = false

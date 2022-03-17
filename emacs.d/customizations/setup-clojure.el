@@ -37,6 +37,10 @@
 
 (put-clojure-indent 'attempt-all 1)
 (put-clojure-indent 'thrown-with-type? 1)
+(put-clojure-indent 'compojure.core/context 1)
+(put-clojure-indent 'compujure.core/GET 1)
+(put-clojure-indent 'GET 1)
+(put-clojure-indent 'compujure.core/POST 1)
 ;; Use clojure mode for other extensions
 ;; (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))

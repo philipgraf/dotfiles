@@ -5,39 +5,39 @@ filetype off                  " required
 set encoding=utf-8
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 " git support
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'fatih/vim-go'
-Plugin 'mattn/emmet-vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rust-lang/rust.vim'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'lervag/vimtex'
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
-"Plugin 'SirVer/ultisnips'
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-surround'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'bling/vim-airline'
+" Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'editorconfig/editorconfig-vim'
+" Plugin 'fatih/vim-go'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'rust-lang/rust.vim'
+" Plugin 'ngmy/vim-rubocop'
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'lervag/vimtex'
+" Plugin 'honza/vim-snippets'
+" Plugin 'ervandew/supertab'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+" call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
